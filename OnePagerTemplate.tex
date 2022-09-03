@@ -1,0 +1,67 @@
+% Article is the most common class so everyone is a bit more used to it
+\documentclass{article}
+
+% Sets Latex Sans Serif as font
+\renewcommand{\familydefault}{\sfdefault}
+
+% Feel free to remove it I needed to show the final result 
+\usepackage{blindtext}
+
+% Allows to create a multicolumn page which is way more sutied for summaries like this one 
+\usepackage{multicol}
+% Sets the space between the columns of text
+\setlength{\columnsep}{0.5cm}
+% Allows to change the margins as you wish 
+\usepackage{geometry}
+% These commands indicate: total={ width, length of our body of text} left= left margin distance top= top margin distance
+\geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=20mm,
+ top=20mm,
+ }
+ % Makes the page numbering disappear
+\pagenumbering{gobble}
+
+% Removes indentation
+\usepackage{parskip}
+
+% My go-to packages when doing literally anything in latex
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{xcolor}
+\usepackage{graphicx}
+
+% Used for personalization of header and footers
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyfoot[C]{Example of Header}
+\fancyhead[C]{Example of Footer}
+
+
+\title{OnePager Template}
+
+% Use this if you want to see the frame of your page; It helps a lot when adjusting the geometry!
+% \usepackage{showframe}
+
+\begin{document}
+
+\begin{center}
+      \Large{\textbf{One Pager Template}}
+\end{center}
+
+%font size 
+\small
+
+%This splits the text on three {3} distinct columns
+\begin{multicols}{3}
+[ % The text within square bracket goes above the Multicolumn environment
+This is a sample to show how the summary will be. Feel free to remove the blindtext beneath and also the package
+]
+\blindtext\blindtext \blindtext \blindtext \blindtext \blindtext  \blindtext \blindtext \blindtext 
+\end{multicols}
+
+% Hi I'm Claudio and I hope this will be a useful tool for university/high school/work summaries! It's thought  to be as simple as possible not to waste any time on useless code and focus on what your are trying to recap. 
+% Good luck! 
+
+\end{document}
